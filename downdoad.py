@@ -26,7 +26,7 @@ def convert_webp_to_jpg(title):
         except Exception as e:
             print(f"⚠️ Failed to convert thumbnail: {e}")
 
-EXPORT_DIR = os.path.join(os.path.expanduser("~"), "Music", "Export")
+EXPORT_DIR = os.path.join(os.path.expanduser("~"), "Music")
 os.makedirs(EXPORT_DIR, exist_ok=True)
 
 def move_to_export(audio_path):

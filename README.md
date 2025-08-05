@@ -1,5 +1,13 @@
 # ytdlp-lyrics-embedder
-Simple yt-dlp script written in python to install music with embedded real time lyrics
+A simple Python script using yt-dlp to download music from YouTube with embedded real-time lyrics and cover art.
+
+# Notes
+Downloads audio in your preferred format (m4a, mp3, flac)
+Automatically downloads and converts English subtitles into synced lyrics (LRC format)
+Embeds lyrics and cover art into the audio file metadata
+Moves finished files to your Music folder (~/Music)
+Converts thumbnails from WebP to JPEG if needed
+
 
 Install Depencies First
 ```

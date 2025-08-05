@@ -11,8 +11,7 @@ Converts thumbnails from WebP to JPEG if needed
 
 Install Depencies First
 ```
-pip install mutagen
-pip install yt-dlp
+pip install mutagen yt-dlp pillow
 ```
 
 Usage:

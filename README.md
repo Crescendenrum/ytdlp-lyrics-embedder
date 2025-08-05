@@ -20,3 +20,13 @@ download.py m4a "URL"
 download.py mp3 "URL"
 download.py flac "URL"
 ```
+
+Add this script to your path to use it everywhere
+```
+Search Environment Variables in the Start Menu.
+Click Edit the system environment variables.
+Click Environment Variables.
+Under User variables or System variables, find Path and click Edit.
+Add the folder path where your script lives (e.g., C:\Scripts).
+Click OK on all dialogs and restart your terminal.
+```

@@ -1,32 +1,34 @@
-# ytdlp-lyrics-embedder
-A simple Python script using yt-dlp to download music from YouTube with embedded real-time lyrics and cover art.
+Basic ytdlp-lyrics-embedder
+Download music from YouTube with embedded cover art and real-time synced lyrics.
+Powered by yt-dlp + mutagen + Pillow.
 
-# Notes
-Downloads audio in your preferred format (m4a, mp3, flac)
-Automatically downloads and converts English subtitles into synced lyrics (LRC format)
-Embeds lyrics and cover art into the audio file metadata
-Moves finished files to your Music folder (~/Music)
-Converts thumbnails from WebP to JPEG if needed
-
-
-Install Depencies First
-```
+Install dependencies:
 pip install mutagen yt-dlp pillow
+
+Basic examples:
+
+```
+python export.py m4a "https://youtube.com/..."
+python export.py mp3 "https://youtube.com/..."
+python export.py flac "https://youtube.com/..."
 ```
 
-Usage:
+With options:
+
 ```
-download.py m4a "URL"
-download.py mp3 "URL"
-download.py flac "URL"
+# High quality MP3
+python export.py mp3 --quality high "https://youtube.com/..."
+
+# FLAC (lossless)
+python export.py flac --quality lossless "https://youtube.com/..."
+
+# Skip subtitles
+python export.py m4a --skip-subtitles "https://youtube.com/..."
 ```
 
-Add this script to your path to use it everywhere
-```
-Search Environment Variables in the Start Menu.
-Click Edit the system environment variables.
-Click Environment Variables.
-Under User variables or System variables, find Path and click Edit.
-Add the folder path where your script lives (e.g., C:\Scripts).
-Click OK on all dialogs and restart your terminal.
-```
+Quality Options
+Option	Bitrate / Quality Target	Notes
+low	~128 kbps	Fastest download
+medium	~192 kbps (default)	Good balance
+high	~320 kbps	Highest lossy quality
+lossless	FLAC	Ignored for non-FLAC
